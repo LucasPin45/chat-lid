@@ -2,9 +2,9 @@ import streamlit as st
 import pandas as pd
 import unidecode
 
-st.set_page_config(page_title="Chat - Lideranças na Câmara", layout="wide")
+st.set_page_config(page_title="ChatLid - Lideranças na Câmara", layout="wide")
 st.image("https://www.consilliumrig.com.br/wp-content/uploads/2022/07/02_Logotipo_Consillium-1024x218.png", width=300)
-st.title("🔍 Chat - Lideranças na Câmara dos Deputados")
+st.title("🔍 ChatLid - Lideranças na Câmara dos Deputados")
 
 @st.cache_data
 def carregar_dados():
@@ -49,7 +49,7 @@ titulos_especiais = {
     "oposicao": "Zucco"
 }
 
-pergunta = st.text_input("Digite sua pergunta sobre os líderes da Câmara:")
+pergunta = st.text_input("Pesquise por partido, bloco ou parlamentar:")
 
 if pergunta:
     pergunta_lower = unidecode.unidecode(pergunta.lower())
